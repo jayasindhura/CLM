@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'CLM.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'CLM',
+        'NAME': 'CLMheroku',
         'USER': 'instructor',
         'PASSWORD': 'instructor1a'
     }

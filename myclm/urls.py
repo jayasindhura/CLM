@@ -14,7 +14,7 @@ urlpatterns = [
     path("member-signup/", memberSignup, name='memberSignup'),
     path("logout/", user_logout, name='user_logout'),
 
-    #re_path(r'^home/$', views.home, name='home'),
+    re_path(r'^home/$', views.home, name='home'),
     path('member_list', views.member_list, name='member_list'),
     path('member/<int:pk>/edit/', views.member_edit, name='member_edit'),
     path('member/<int:pk>/delete/', views.member_delete, name='member_delete'),

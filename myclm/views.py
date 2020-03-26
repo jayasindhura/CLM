@@ -159,6 +159,12 @@ def homepage(request):
     return render(request, "myclm/landing_page.html", {})
     #return render(request, "myclm/home_member.html", {})
 
+# Create your views here.
+now = timezone.now()
+def home(request):
+   return render(request, 'myclm/home.html',
+                 {'myclm': home})
+
 def home_member(request):
    return render(request, 'myclm/home_member.html',
                  {'myclm': home_member})

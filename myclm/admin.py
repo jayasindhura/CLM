@@ -1,7 +1,13 @@
 from django.contrib import admin
-from .models import Category,Author,Book,Member,Borrow
+from .models import User,Category,Author,Book,Member,Borrow
 
 # Register your models here.
+class UserList(admin.ModelAdmin):
+    list_display = ('first_name','last_name', 'email','username','is_active','created_on','role','is_staff','is_member')
+    list_filter = ('first_name','last_name', 'email','username','is_active','created_on','role','is_staff','is_member')
+    search_fields = ('first_name','last_name', 'email','username','is_active','created_on','role','is_staff','is_member')
+    ordering = ['first_name']
+
 class CategoryList(admin.ModelAdmin):
     list_display = ['category_name']
     list_filter = ['category_name']
@@ -32,6 +38,7 @@ class BorrowList(admin.ModelAdmin):
     search_fields = ('Borrow_Member_NUID','Borrow_Book_Name','Borrow_Author_Name','Borrow_Category_Name','Taken_date','Broughtback_date')
     ordering = ['Borrow_Member_NUID']
 
+admin.site.register(User,UserList)
 admin.site.register(Category,CategoryList)
 admin.site.register(Author,AuthorList)
 admin.site.register(Book,BookList)

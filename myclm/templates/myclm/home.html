@@ -1,0 +1,53 @@
+{% extends 'myclm/base.html' %}
+{% load static %}
+{% block content %}
+
+   <body>
+    <html>
+            {% if user.is_authenticated %}
+                <div class="page-container">
+
+                    <h2 class="top-menu">Hello {{ user.username }},</h2>
+                    <p>Please choose from below options.</p>
+
+                </div>
+            {% endif %}
+            <div class="content container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="links">
+                            <!-- Example row of columns -->
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="thumbnail">
+                                        <img src="{% static "images/member_login.jpg" %}" alt="members"/>
+                                        <div class="caption">
+                                            <h2></h2>
+                                           <!-- <p>Great Products.</p> > -->
+                                            <p><a class="btn btn-primary" href="{% url 'myclm:memberLogin' %}"
+                                                  role="button">Login </a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="thumbnail">
+                                        <img src="{% static "images/staff_login.jpg" %}" alt="staff"/>
+                                        <div class="caption">
+                                            <h2></h2>
+                                            <!--<p>We see our success in our customers success </p> -->
+                                            <p><a class="btn btn-primary" href="{% url 'myclm:staffLogin' %}"
+                                                  role="button">Login</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </body>
+    </html>
+{% endblock %}

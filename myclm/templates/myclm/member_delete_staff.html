@@ -1,0 +1,12 @@
+{% extends 'myclm/base_member.html' %}
+{% block body_block %}
+    <h1>Delete {{ member.name }}?</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" class="btn btn-danger" value="Delete">
+        <a href="{% url 'myclm:home' pk=member.member_NUID %} ">Cancel</a>
+
+    </form>
+
+{% endblock %}

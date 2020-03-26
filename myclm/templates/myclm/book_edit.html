@@ -1,0 +1,9 @@
+{% extends 'myclm/base_member.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <h1>Edit Book</h1>
+    <form method="POST" class="borrow-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Update</button>
+    </form>
+{% endblock %}

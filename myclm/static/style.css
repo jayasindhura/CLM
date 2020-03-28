@@ -1,25 +1,25 @@
 h2 {
-    color: #008000;
+    color: #008000 !important;
 
 }
-.navbar {
-            background-color: #128012
+.navbar-default {
+            background-color: #128012 !important;
         }
 
-.navbar .navbar-brand {
-           color: #ffffff
+.navbar-default .navbar-brand {
+           color: #ffffff !important;
         }
-.navbar .navbar-nav li a
+.navbar-default .navbar-nav > li > a
         {
-           color: #ffffff
+           color: #ffffff !important;
         }
-.navbar .navbar-nav .dropdown-menu li a
+.navbar-default .navbar-nav >  li > a >.dropdown-menu
   {
-           color: #ffa500
+           color: #ffa500 !important;
         }
-.navbar .navbar-nav .dropdown li a
+.navbar-default .navbar-nav .dropdown > li > a
   {
-           color: #ffa500
+           color: #ffa500 !important;
         }
 body {
     background: #ffa500 url("images/library.png") no-repeat;

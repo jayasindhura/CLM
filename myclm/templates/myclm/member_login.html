@@ -1,5 +1,5 @@
 {% extends 'myclm/base.html' %}
-{% block body_content %}
+{% block content %}
 <h2 class="text-center">
   Member Login
 </h2>
@@ -53,13 +53,6 @@
 
     </div>
     </form>
-    <p class="text-center mt-3">
-      Don't have an account
-      <a href="{% url 'myclm:memberSignup' %}">Sign Up Now</a>
-    </p>
-    <p class="text-center mt-3">
-      Forgot password?
-      <a href="{% url 'password_reset' %}">Reset Password</a>
 
     </p>
   </div>
@@ -68,4 +61,4 @@
   
 </script>
 
-{% endblock body_content %}
+{% endblock content %}

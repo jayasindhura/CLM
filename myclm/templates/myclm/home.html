@@ -1,5 +1,6 @@
 {% extends 'myclm/base.html' %}
 {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 {% block content %}
 
    <body>
@@ -18,28 +19,52 @@
                         <div class="links">
                             <!-- Example row of columns -->
                             <div class="row">
-                                <div class="col-md-3">
-                                    <div class="thumbnail">
-                                        <img src="{% static "images/member_login.jpg" %}" alt="members"/>
-                                        <div class="caption">
-                                            <h2></h2>
-                                           <!-- <p>Great Products.</p> > -->
-                                            <p><a class="btn btn-primary" href="{% url 'myclm:memberLogin' %}"
-                                                  role="button">Login </a></p>
-                                        </div>
-                                    </div>
+                                 <div class="col-md-5">
+                            <div class="thumbnail" >
+                                <img src="{% static "images/member_login.jpg" %}" alt="Member"/>
+                                <div class="caption">
+                                    <h2></h2>
+                                       <td><a  class="btn btn-default" href="{% url 'myclm:memberLogin' %}"
+                                              role="button">Login</a></td>
+
+
+                                     <p class="text-left mt-3">Don't have an account
+                                            <a href="{% url 'myclm:memberSignup' %}">Sign Up Now</a>
+                                        </p>
+                                        <p class="text-left mt-3">
+
+                                        </p>
+                                        <p class="text-left mt-3">
+                                            <a href="{% url 'password_reset' %}">Forgot Password?</a>
+                                        </p>
+
+
                                 </div>
-                                <div class="col-md-3">
-                                    <div class="thumbnail">
-                                        <img src="{% static "images/staff_login.jpg" %}" alt="staff"/>
-                                        <div class="caption">
-                                            <h2></h2>
-                                            <!--<p>We see our success in our customers success </p> -->
-                                            <p><a class="btn btn-primary" href="{% url 'myclm:staffLogin' %}"
-                                                  role="button">Login</a></p>
-                                        </div>
-                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="thumbnail">
+                                <img src="{% static "images/staff_login.jpg" %}" alt="Book"/>
+                                <div class="caption">
+                                    <h2></h2>
+                                   <!-- <p>High quality Books at affordable prices.</p> -->
+                                        <td><a class="btn btn-default" href="{% url 'myclm:staffLogin' %}"
+                                              role="button">Login</a></td>
+
+                                        <p class="text-center mt-3">
+
+                                        </p>
+                                         <p class="text-left mt-3">
+                                          Don't have an account
+                                          <a href="{% url 'myclm:staffSignup' %}">Sign Up Now</a>
+                                        </p>
+                                        <p class="text-left mt-3">
+                                          Forgot password?
+                                          <a href="{% url 'password_reset' %}">Reset Password</a>
+                                        </p>
                                 </div>
+                            </div>
+                        </div>
 
 
 

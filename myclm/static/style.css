@@ -1,0 +1,28 @@
+src = "/css/styles.css?v={random number/string}"
+h2 {
+    color: Green;
+
+}
+.navbar {
+            background-color: Green
+        }
+
+.navbar .navbar-brand {
+           color: White
+        }
+.navbar .navbar-nav li a
+        {
+           color: White
+        }
+.navbar .navbar-nav .dropdown-menu li a
+  {
+           color: Orange
+        }
+.navbar .navbar-nav .dropdown li a
+  {
+           color: Orange
+        }
+body {
+    background: orange url("images/UNO_library.png") no-repeat;
+    background-size: 2500px
+}

@@ -1,6 +1,5 @@
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-
 <html lang="en">
 <head>
     <title>College Library Services</title>
@@ -69,10 +68,10 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li><a href="{% url 'myclm:home_member' %}">Home</a></li>
-                <li><a href="{% url 'myclm:book_list' %}">Books</a></li>
-                <li><a href="{% url 'myclm:member_list' %}">Members</a></li>
-                <li><a href="{% url 'myclm:borrow_list' %}">Borrows</a></li>
+                <li><a href="{% url 'myclm:home_staff' %}">Home</a></li>
+                <li><a href="{% url 'myclm:book_list_staff' %}">Books</a></li>
+                <li><a href="{% url 'myclm:member_list_staff' %}">Members</a></li>
+                <li><a href="{% url 'myclm:borrow_list_staff' %}">Borrows</a></li>
 
 
             </ul>
@@ -89,9 +88,10 @@
                         </ul>
                     </li>
                 {% else %}
-                    <li><a href="{% url 'password_change' %}">change Password</a></li>
+
                     <li><a href="{% url 'myclm:user_logout' %}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
                 {% endif %}
+
             </ul>
         </div>
     </div>
@@ -110,7 +110,7 @@
                                     <h2>Member</h2>
                                    <!-- <p>Delighting Members and giving them a great dining experience is our main goal. </p> -->
                                     {% if user.is_authenticated %}
-                                        <p><a class="btn btn-default" href="{% url 'myclm:member_list' %}"
+                                        <p><a class="btn btn-default" href="{% url 'myclm:member_list_staff' %}"
                                               role="button">View Members</a></p>
                                     {% endif %}
                                 </div>
@@ -122,7 +122,7 @@
                                 <div class="caption">
                                     <h2>Books</h2>
                                    <!-- <p>High quality Books at affordable prices.</p> -->
-                                    <p><a class="btn btn-default" href="{% url 'myclm:book_list' %}"
+                                    <p><a class="btn btn-default" href="{% url 'myclm:book_list_staff' %}"
                                            role="button">View Books</a></p>
                                 </div>
                             </div>
@@ -133,7 +133,7 @@
                                 <div class="caption">
                                     <h2>Borrows</h2>
                                    <!-- <p>Our food and Borrows are second to none.</p> -->
-                                    <p><a class="btn btn-default" href="{% url 'myclm:borrow_list' %}" role="button">View Borrows</a></p>
+                                    <p><a class="btn btn-default" href="{% url 'myclm:borrow_list_staff' %}" role="button">View Borrows</a></p>
                                 </div>
                             </div>
                         </div>

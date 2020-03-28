@@ -1,23 +1,31 @@
-h2 {
-    color: #008000 !important;
+h1 {
+    color: #ffffff !important;
+    font-weight: bolder;
+    font-weight: 900;
 
 }
-.navbar-default {
-            background-color: #128012 !important;
+h2 {
+    color: #151a80 !important;
+    font-weight: bolder;
+    font-weight: 900;
+
+}
+.navbar {
+            background-color: #151a80 !important;
         }
 
-.navbar-default .navbar-brand {
+.navbar .navbar-brand {
            color: #ffffff !important;
         }
-.navbar-default .navbar-nav > li > a
+.navbar .navbar-nav > li > a
         {
            color: #ffffff !important;
         }
-.navbar-default .navbar-nav >  li > a >.dropdown-menu
+.navbar .navbar-nav >  li > a >.dropdown-menu
   {
            color: #ffa500 !important;
         }
-.navbar-default .navbar-nav .dropdown > li > a
+.navbar .navbar-nav .dropdown > li > a
   {
            color: #ffa500 !important;
         }

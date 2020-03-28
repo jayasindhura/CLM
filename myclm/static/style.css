@@ -1,28 +1,27 @@
-src = "/css/styles.css?v={random number/string}"
 h2 {
-    color: Green;
+    color: #008000;
 
 }
 .navbar {
-            background-color: Green
+            background-color: #128012
         }
 
 .navbar .navbar-brand {
-           color: White
+           color: #ffffff
         }
 .navbar .navbar-nav li a
         {
-           color: White
+           color: #ffffff
         }
 .navbar .navbar-nav .dropdown-menu li a
   {
-           color: Orange
+           color: #ffa500
         }
 .navbar .navbar-nav .dropdown li a
   {
-           color: Orange
+           color: #ffa500
         }
 body {
-    background: orange url("images/UNO_library.png") no-repeat;
+    background: #ffa500 url("images/library.png") no-repeat;
     background-size: 2500px
 }

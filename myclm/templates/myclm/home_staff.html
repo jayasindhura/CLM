@@ -22,42 +22,51 @@
                         <div class="links">
                             <!-- Example row of columns -->
                             <div class="row">
-                                <div class="col-md-3">
-                                    <div class="thumbnail">
-                                        <img src="{% static "images/Books.jpg" %}" alt="Books"/>
-                                        <div class="caption">
-                                            <h2>Books</h2>
-                                           <!-- <p>Great Products.</p> > -->
-                                            <p><a class="btn btn-primary" href="{% url 'myclm:book_list_staff' %}"
-                                                  role="button">View Books</a></p>
+                                <div class="col-md-12">
+                                    <div class="col-md-3">
+                                        <div class="thumbnail">
+                                            <img src="{% static "images/Books.jpg" %}" alt="Books"/>
+                                            <div class="caption">
+                                                <h2>Books</h2>
+                                               <!-- <p>Great Products.</p> > -->
+                                                <p><a class="btn btn-primary" href="{% url 'myclm:book_list_staff' %}"
+                                                      role="button">View Books</a></p>
+                                            </div>
+                                        </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="col-md-3">
+                                        <div class="thumbnail">
+                                            <img src="{% static "images/Member.jpg" %}" alt="customer"/>
+                                            <div class="caption">
+                                                <h2>Members</h2>
+                                                <!--<p>We see our success in our customers success </p> -->
+                                                <p><a class="btn btn-primary" href="{% url 'myclm:member_list_staff' %}"
+                                                      role="button">View
+                                                    details &raquo;</a></p>
+                                            </div>
+                                     </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="col-md-3">
+                                        <div class="thumbnail">
+                                            <img src="{% static "images/Borrow.jpg" %}" alt="Borrow"/>
+                                            <div class="caption">
+                                                <h2>Borrows</h2>
+                                               <!-- <p>Great Services</p> -->
+                                                <p><a class="btn btn-primary" href="{% url 'myclm:borrow_list_staff' %}"
+                                                      role="button">View
+                                                    details &raquo;</a></p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
-                                    <div class="thumbnail">
-                                        <img src="{% static "images/Member.jpg" %}" alt="customer"/>
-                                        <div class="caption">
-                                            <h2>Members</h2>
-                                            <!--<p>We see our success in our customers success </p> -->
-                                            <p><a class="btn btn-primary" href="{% url 'myclm:member_list_staff' %}"
-                                                  role="button">View
-                                                details &raquo;</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="thumbnail">
-                                        <img src="{% static "images/Borrow.jpg" %}" alt="Borrow"/>
-                                        <div class="caption">
-                                            <h2>Borrows</h2>
-                                           <!-- <p>Great Services</p> -->
-                                            <p><a class="btn btn-primary" href="{% url 'myclm:borrow_list_staff' %}"
-                                                  role="button">View
-                                                details &raquo;</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-
 
                             </div>
                         </div>

@@ -74,6 +74,7 @@ class Book(models.Model):
     Book_publisher = models.CharField(max_length=100)
     Book_author_name = models.ForeignKey(Author, on_delete=models.CASCADE, default='', blank=True, null=True)
     Book_category_name = models.ForeignKey(Category, on_delete=models.CASCADE, default='', blank=True, null=True)
+    #Book_count = models.CharField(max_length=100)
     created_date = models.DateTimeField(default=timezone.now)
     updated_date = models.DateTimeField(auto_now_add=True)
 

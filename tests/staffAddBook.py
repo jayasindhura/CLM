@@ -3,7 +3,7 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-class staffEditMember(unittest.TestCase):
+class staffAddBook(unittest.TestCase):
 
    def setUp(self):
        self.driver = webdriver.Chrome()

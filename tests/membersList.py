@@ -16,7 +16,7 @@ class memberList(unittest.TestCase):
        driver.get("http://myclm.herokuapp.com/home")
        elem = driver.find_element_by_xpath('//*[@id="app-layout"]/div/div/div/div/div/div/div/div/div[1]/div/div/a').click()
        #elem = driver.find_element_by_xpath('//*[@id="app-layout"]/div/div/div/div/div/div[1]/div/div/p[1]/a').click()
-       time.sleep(2)
+
        driver.get("https://myclm.herokuapp.com/member-login/")
        time.sleep(2)
        elem = driver.find_element_by_xpath('//*[@id="exampleInputEmail1"]')

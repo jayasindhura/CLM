@@ -111,7 +111,7 @@
                                     <h2>Members</h2>
                                    <!-- <p>Delighting Members and giving them a great dining experience is our main goal. </p> -->
                                     {% if user.is_authenticated %}
-                                        <p><a class="btn btn-default" href="{% url 'myclm:member_list_staff' %}"
+                                        <p><a class="btn btn-primary" href="{% url 'myclm:member_list_staff' %}"
                                               role="button">View Members</a></p>
                                     {% endif %}
                                 </div>
@@ -123,7 +123,7 @@
                                 <div class="caption">
                                     <h2>Books</h2>
                                    <!-- <p>High quality Books at affordable prices.</p> -->
-                                    <p><a class="btn btn-default" href="{% url 'myclm:book_list_staff' %}"
+                                    <p><a class="btn btn-primary" href="{% url 'myclm:book_list_staff' %}"
                                            role="button">View Books</a></p>
                                 </div>
                             </div>
@@ -134,7 +134,7 @@
                                 <div class="caption">
                                     <h2>Borrows</h2>
                                    <!-- <p>Our food and Borrows are second to none.</p> -->
-                                    <p><a class="btn btn-default" href="{% url 'myclm:borrow_list_staff' %}" role="button">View Borrows</a></p>
+                                    <p><a class="btn btn-primary" href="{% url 'myclm:borrow_list_staff' %}" role="button">View Borrows</a></p>
                                 </div>
                             </div>
                         </div>

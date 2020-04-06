@@ -3,30 +3,31 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-class staffSignup(unittest.TestCase):
+class memberLogout(unittest.TestCase):
 
    def setUp(self):
        self.driver = webdriver.Chrome()
 
    def test_website(self):
-       email = "jaya1@unomaha.edu"
+       email = "jpailla@unomaha.edu"
        pwd1 = "Team@123"
-       pwd2 = "Team@123"
        driver = self.driver
        driver.maximize_window()
-       driver.get("http://myclm.herokuapp.com/home/")
-       elem = driver.find_element_by_xpath('//*[@id="app-layout"]/div/div/div/div/div/div/div/div/div[2]/div/div/p[2]/a').click()
+       driver.get("http://myclm.herokuapp.com/home")
+       elem = driver.find_element_by_xpath('//*[@id="app-layout"]/div/div/div/div/div/div/div/div/div[1]/div/div/a').click()
+       #elem = driver.find_element_by_xpath('//*[@id="app-layout"]/div/div/div/div/div/div[1]/div/div/p[1]/a').click()
        time.sleep(2)
-       driver.get("https://myclm.herokuapp.com/staff-signup/")
+       driver.get("https://myclm.herokuapp.com/member-login/")
        time.sleep(2)
        elem = driver.find_element_by_xpath('//*[@id="exampleInputEmail1"]')
        elem.send_keys(email)
        elem = driver.find_element_by_xpath('//*[@id="exampleInputPassword1"]')
        elem.send_keys(pwd1)
-       elem = driver.find_element_by_xpath('//*[@id="exampleInputPassword2"]')
-       elem.send_keys(pwd2)
        elem.send_keys(Keys.RETURN)
-       #elem = driver.find_element_by_xpath('// *[ @ id = "app-layout"] / div / div / div / div / div / form / div[4] / button').click()
+       time.sleep(2)
+       elem = driver.find_element_by_xpath('//*[@id="app-layout"]/div/div/div/div/div/div[3]/div/div/p/a').click()
+       time.sleep(2)
+       elem = driver.find_element_by_xpath('//*[@id="myNavbar"]/ul[2]/li[2]/a').click()
        time.sleep(2)
 
 

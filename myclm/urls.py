@@ -53,4 +53,10 @@ urlpatterns = [
 
     path('book/<int:pk>/delete/', views.book_delete, name='book_delete'),
     path('book_staff/<int:pk>/delete/', views.book_delete_staff, name='book_delete_staff'),
+
+    path('pdf/', views.borrow_summary_pdf,name='borrow_summary_pdf'),
+
+    #path('borrow_summary_pdf', views.borrow_summary_pdf, name='borrow_summary_pdf'),
+
+    #path('borrow_summary_pdf', views.get, name='borrow_summary_pdf'),
 ]

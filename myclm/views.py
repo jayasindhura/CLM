@@ -6,6 +6,7 @@ from .forms import *
 from django.contrib.auth import authenticate, login, logout
 from myclm.access_decorators_mixins import member_access_required, staff_access_required
 
+
 # Create your views here.
 def staffSignup(request):
     if request.method == "GET":
@@ -431,3 +432,16 @@ def book_delete_staff(request, pk):
    return redirect('myclm:book_list_staff')
 
 
+
+from django.http import HttpResponse
+from django.views.generic import View
+from myclm.utils import render_to_pdf
+from django.template.loader import get_template
+
+def borrow_summary_pdf(request):
+    borrows = Borrow.objects.all()
+    context = {'borrows': borrows,}
+    template = get_template('myclm/borrow_summary_pdf.html')
+    html = template.render(context)
+    pdf = render_to_pdf('myclm/borrow_summary_pdf.html', context)
+    return pdf

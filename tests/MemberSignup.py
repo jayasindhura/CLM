@@ -9,7 +9,7 @@ class memberSignup(unittest.TestCase):
        self.driver = webdriver.Chrome()
 
    def test_website(self):
-       email = "sindhura1234@unomaha.edu"
+       email = "sindhurapp@unomaha.edu"
        pwd1 = "Team@123"
        pwd2 = "Team@123"
        driver = self.driver

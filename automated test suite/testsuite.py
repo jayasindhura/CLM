@@ -2,10 +2,10 @@ import unittest
 import time
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-from tests import MemberSignup,adminlogin,memberForgotPassword,staffAddBook,staffEditMember,StaffSignup,memberLogin,staffAddMember,staffForgotPassword,memberBooks,memberLogout,staffChangePassword,staffLogin,memberBorrowsEdit,membersChangePassword,staffEditBook,staffLogout,adminLogout,memberBorrowsform,membersList,staffEditBorrow,staffNewBorrow
+from tests import MemberSignup,adminlogin,memberForgotPassword,staffAddBook,staffEditMember,StaffSignup,memberLogin,staffAddMember,staffForgotPassword,memberBooks,memberLogout,staffChangePassword,staffLogin,memberBorrowsEdit,membersChangePassword,staffEditBook,staffLogout,adminLogout,memberBorrowsform,membersList,staffEditBorrow,staffNewBorrow,Borrowsummarypdf
 loader = unittest.TestLoader()
 suite = unittest.TestSuite()
-suite.addTest(unittest.loader.findTestCases(adminlogin))
+
 suite.addTest(unittest.loader.findTestCases(adminlogin))
 
 suite.addTest(unittest.loader.findTestCases(MemberSignup))
@@ -29,6 +29,8 @@ suite.addTest(unittest.loader.findTestCases(staffNewBorrow))
 suite.addTest(unittest.loader.findTestCases(staffEditBorrow))
 suite.addTest(unittest.loader.findTestCases(staffChangePassword))
 suite.addTest(unittest.loader.findTestCases(staffLogout))
+
+suite.addTest(unittest.loader.findTestCases(Borrowsummarypdf))
 
 runner = unittest.TextTestRunner(verbosity=3)
 

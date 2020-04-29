@@ -21,9 +21,9 @@ class staffLogout(unittest.TestCase):
        elem = driver.find_element_by_xpath('//*[@id="exampleInputPassword1"]')
        elem.send_keys(pwd1)
        elem.send_keys(Keys.RETURN)
-       time.sleep(2)
+       #time.sleep(1)
        elem = driver.find_element_by_xpath('//*[@id="myNavbar"]/ul[2]/li[2]/a').click()
-       time.sleep(2)
+       time.sleep(1)
 
 
    def tearDown(self):

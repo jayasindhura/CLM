@@ -14,13 +14,13 @@ class staffForgotPassword(unittest.TestCase):
        driver.maximize_window()
        driver.get("http://myclm.herokuapp.com/home/")
        elem = driver.find_element_by_xpath('//*[@id="app-layout"]/div/div/div/div/div/div/div/div/div[2]/div/div/p[3]/a').click()
-       time.sleep(2)
+       #time.sleep(1)
        driver.get("https://myclm.herokuapp.com/accounts/password_reset/")
        elem = driver.find_element_by_xpath('//*[@id="id_email"]')
        elem.send_keys(email)
        elem.send_keys(Keys.RETURN)
        #elem = driver.find_element_by_xpath('// *[ @ id = "app-layout"] / div / div / div / div / div / form / div[4] / button').click()
-       time.sleep(2)
+       time.sleep(1)
 
 
    def tearDown(self):

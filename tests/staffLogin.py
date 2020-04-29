@@ -23,7 +23,7 @@ class staffLogin(unittest.TestCase):
 
        elem.send_keys(Keys.RETURN)
        #elem = driver.find_element_by_xpath('// *[ @ id = "app-layout"] / div / div / div / div / div / form / div[4] / button').click()
-       time.sleep(2)
+       time.sleep(1)
 
 
    def tearDown(self):

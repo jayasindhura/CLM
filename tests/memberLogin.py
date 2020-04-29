@@ -11,12 +11,13 @@ class memberLogin(unittest.TestCase):
    def test_website(self):
        email = "jpailla@unomaha.edu"
        pwd1 = "Team@123"
+
        driver = self.driver
        driver.maximize_window()
        driver.get("http://myclm.herokuapp.com/home")
        elem = driver.find_element_by_xpath('//*[@id="app-layout"]/div/div/div/div/div/div/div/div/div[1]/div/div/a').click()
        driver.get("https://myclm.herokuapp.com/member-login/")
-       time.sleep(2)
+       #time.sleep(1)
        elem = driver.find_element_by_xpath('//*[@id="exampleInputEmail1"]')
        elem.send_keys(email)
        elem = driver.find_element_by_xpath('//*[@id="exampleInputPassword1"]')
@@ -24,7 +25,7 @@ class memberLogin(unittest.TestCase):
 
        elem.send_keys(Keys.RETURN)
        #elem = driver.find_element_by_xpath('// *[ @ id = "app-layout"] / div / div / div / div / div / form / div[4] / button').click()
-       time.sleep(2)
+       time.sleep(1)
 
 
    def tearDown(self):

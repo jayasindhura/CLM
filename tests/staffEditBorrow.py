@@ -11,6 +11,11 @@ class staffEditBorrow(unittest.TestCase):
    def test_website(self):
        email = "sindhurapailla@gmail.com"
        pwd1 = "Team@123"
+       Borrow_Member_NUID = ""
+       Borrow_Book_Name = ""
+       Borrow_Author_Name = ""
+       Borrow_Category_Name = ""
+
        driver = self.driver
        driver.maximize_window()
        driver.get("http://myclm.herokuapp.com/home")
@@ -21,13 +26,26 @@ class staffEditBorrow(unittest.TestCase):
        elem = driver.find_element_by_xpath('//*[@id="exampleInputPassword1"]')
        elem.send_keys(pwd1)
        elem.send_keys(Keys.RETURN)
-       time.sleep(2)
+
        elem = driver.find_element_by_xpath('//*[@id="app-layout"]/div/div/div/div/div/div[3]/div/div/p/a').click()
-       time.sleep(2)
+
        elem = driver.find_element_by_xpath('//*[@id="app-layout"]/div/div/div/div[3]/table/tbody/tr[1]/td[7]/a').click()
-       time.sleep(2)
+
+
+       elem = driver.find_element_by_xpath('//*[@id="id_Borrow_Member_NUID"]')
+       elem.send_keys(Borrow_Member_NUID)
+
+       elem = driver.find_element_by_xpath('//*[@id="id_Borrow_Book_Name"]')
+       elem.send_keys(Borrow_Book_Name)
+
+       elem = driver.find_element_by_xpath('//*[@id="id_Borrow_Author_Name"]')
+       elem.send_keys(Borrow_Author_Name)
+
+       elem = driver.find_element_by_xpath('//*[@id="id_Borrow_Category_Name"]')
+       elem.send_keys(Borrow_Category_Name)
+
        elem = driver.find_element_by_xpath('//*[@id="app-layout"]/div/div/div/form/button').click()
-       time.sleep(2)
+       time.sleep(1)
 
 
    def tearDown(self):

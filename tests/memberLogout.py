@@ -16,17 +16,17 @@ class memberLogout(unittest.TestCase):
        driver.get("http://myclm.herokuapp.com/home")
        elem = driver.find_element_by_xpath('//*[@id="app-layout"]/div/div/div/div/div/div/div/div/div[1]/div/div/a').click()
        driver.get("https://myclm.herokuapp.com/member-login/")
-       time.sleep(2)
+       #time.sleep(1)
        elem = driver.find_element_by_xpath('//*[@id="exampleInputEmail1"]')
        elem.send_keys(email)
        elem = driver.find_element_by_xpath('//*[@id="exampleInputPassword1"]')
        elem.send_keys(pwd1)
        elem.send_keys(Keys.RETURN)
-       time.sleep(2)
+       #time.sleep(1)
        elem = driver.find_element_by_xpath('//*[@id="app-layout"]/div/div/div/div/div/div[3]/div/div/p/a').click()
-       time.sleep(2)
+       #time.sleep(1)
        elem = driver.find_element_by_xpath('//*[@id="myNavbar"]/ul[2]/li[2]/a').click()
-       time.sleep(2)
+       time.sleep(1)
 
 
    def tearDown(self):

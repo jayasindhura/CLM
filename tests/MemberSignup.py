@@ -9,7 +9,7 @@ class memberSignup(unittest.TestCase):
        self.driver = webdriver.Chrome()
 
    def test_website(self):
-       email = "sindhurappp@unomaha.edu"
+       email = "sindhurapailla16@unomaha.edu"
        pwd1 = "Team@123"
        pwd2 = "Team@123"
        driver = self.driver
@@ -17,7 +17,7 @@ class memberSignup(unittest.TestCase):
        driver.get("http://myclm.herokuapp.com/")
        elem = driver.find_element_by_xpath('//*[@id="app-layout"]/div/div/div/div/div/div[1]/div/div/p[1]/a').click()
        driver.get("https://myclm.herokuapp.com/member-signup/")
-       time.sleep(2)
+       #time.sleep(1)
        elem = driver.find_element_by_xpath('//*[@id="exampleInputEmail1"]')
        elem.send_keys(email)
        elem = driver.find_element_by_xpath('//*[@id="exampleInputPassword1"]')
@@ -26,7 +26,7 @@ class memberSignup(unittest.TestCase):
        elem.send_keys(pwd2)
        elem.send_keys(Keys.RETURN)
        #elem = driver.find_element_by_xpath('// *[ @ id = "app-layout"] / div / div / div / div / div / form / div[4] / button').click()
-       time.sleep(2)
+       time.sleep(1)
 
 
    def tearDown(self):

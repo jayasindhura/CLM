@@ -22,7 +22,7 @@ class adminLogout(unittest.TestCase):
        #driver.get("http://myclm.herokuapp.com/admin")
        elem = driver.find_element_by_xpath('//*[@ id = "user-tools"]/a[3]').click()
        assert "Logged Out"
-       time.sleep(4)
+       time.sleep(1)
 
 
    def tearDown(self):

@@ -22,7 +22,7 @@ class adminLogin(unittest.TestCase):
        elem.send_keys(Keys.RETURN)
        driver.get("http://myclm.herokuapp.com/admin")
        assert "Logged In"
-       time.sleep(2)
+       time.sleep(1)
 
    def tearDown(self):
        self.driver.close()
